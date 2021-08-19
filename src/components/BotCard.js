@@ -12,6 +12,7 @@ const botTypeClasses = {
 function BotCard({ bot, onRecruit, onRelease }) {
   function handleCardClick () {
     if (!bot.recruited) onRecruit(bot)
+    if (bot.recruited) onRelease(bot)
     }
   
   function handleDeleteClick () {
